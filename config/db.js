@@ -45,7 +45,7 @@ const insertarAlumno=async()=>{
 
 //ejemplo para eliminar productos
 const borrarAlumno = async () => {
-    const consulta = 'delete from alumno where rut =';
+    const consulta = 'delete from alumno where rut =$1';
     const values = ['6457141-9'];
     const response = await dbase.query(consulta, values);
     console.log(response);
